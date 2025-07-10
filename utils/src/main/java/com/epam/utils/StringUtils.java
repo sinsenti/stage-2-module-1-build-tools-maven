@@ -4,6 +4,8 @@ public class StringUtils {
   public static boolean isPositiveNumber(String str) {
     if (str == null || str.isEmpty())
       return false;
+    if (!str.matches("[0-9]+(\\.[0-9]+)?"))
+      return false;
     try {
       return Double.parseDouble(str) > 0;
     } catch (NumberFormatException e) {
