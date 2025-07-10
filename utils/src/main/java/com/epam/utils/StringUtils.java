@@ -2,6 +2,7 @@ package com.epam.utils;
 
 public class StringUtils {
   public static boolean isPositiveNumber(String str) {
+    str = str.trim();
     if (str == null || str.isEmpty())
       return false;
     if (!str.matches("[0-9]+(\\.[0-9]+)?"))
